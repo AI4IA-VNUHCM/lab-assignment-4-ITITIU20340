@@ -21,10 +21,10 @@ void Ex1(int n){
 	for (int row = 0 ; row <= n; row++){
 		for (int col = 0; col <= row ;col++){
 			if (col == 0 || col == row){
-				printf("%d",arr[row][col]= 1);
+				printf("%d ",arr[row][col]= 1);
 			}else if (col > 0 && col <= n){
 			arr[row][col]= arr[row-1][col-1]+ arr[row-1][col];
-			printf("%d", arr[row][col]);
+			printf("%d ", arr[row][col]);
 			}
 		} printf("\n");
 	}
