@@ -34,10 +34,24 @@ void Array2Dconverter(int arr[], int a[SIZE][SIZE], int m, int n)
 }
 
 void Ex5(int arr[], int m, int n){
+	int max[100];
 	int a[SIZE][SIZE];
 	Array2Dconverter(arr,a,m,n);
 	//Your codes here
+	for (int g= 0; g < m; g++){
+		int min = a[g][0];
+		for(int h = 1; h < n; h++){
+			if (a[g][h] < min){
+				min = a[g][h];
+			}
 
+		} max[g] = min;
+	}
+	int MAX = max[0];
+	for (int l = 0 ; l < m; l++){
+		if (MAX < max[l]) MAX = max[l]; 
+	}
+	printf("%d", MAX);
 }
 
 int main(int argc, char *argv[]) {
